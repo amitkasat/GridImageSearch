@@ -1,7 +1,6 @@
 package com.example.gridimagesearch.activities;
 
 import java.util.ArrayList;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -19,17 +18,19 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.example.gridimagesearch.R;
+import com.example.gridimagesearch.SettingsActivity;
 import com.example.gridimagesearch.adapters.ImageResultsAdapter;
 import com.example.gridimagesearch.models.ImageResult;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 
-public class SearchActivity extends Activity {
+public class SearchActivity extends Activity{
 	private EditText etQuery;
 	private GridView gvResults;
 	private ArrayList<ImageResult> imageResults;
 	private ImageResultsAdapter aImageResults;
+	private SettingsActivity search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,8 @@ public class SearchActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.search, menu);
+        //settings icon
+        //getMenuInflater().inflate(R.menu.menu_settings, menu);
         return true;
     }
     // Fired when the button is pressed (android:onClick property)

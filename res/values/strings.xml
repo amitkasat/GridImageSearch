@@ -8,5 +8,6 @@
     <string name="search_label">Search</string>
     <string name="image_title_label">Image title</string>
     <string name="title_activity_image_display">Full Image</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 
 </resources>
